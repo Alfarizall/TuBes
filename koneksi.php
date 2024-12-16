@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'desa';
+$dbname = 'imunisasi';
 $user = 'root';
 $pass = '';
 
