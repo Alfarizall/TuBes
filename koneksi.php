@@ -1,13 +1,10 @@
-<?php
-$host = 'localhost';
-$dbname = 'imunisasi';
-$user = 'root';
-$pass = '';
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+<?php 
+ 
+$koneksi = mysqli_connect("localhost","root","","imunisasi");
+ 
+// Check connection
+if (mysqli_connect_errno()){
+	echo "Koneksi database gagal : " . mysqli_connect_error();
 }
+ 
 ?>
