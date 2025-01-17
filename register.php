@@ -9,7 +9,7 @@
     <div class="register-container">
         <!-- Logo Image -->
         <div class="profile-icon">
-            <img src="hospital.jpg" alt="Logo Klinik">
+            <img src="byi2.jpg" alt="Logo Bayi">
         </div>
 
         <?php if (isset($_GET['status']) && $_GET['status'] == 'success') { ?>

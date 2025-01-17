@@ -9,44 +9,30 @@
     }
 }
 
-:root {
-    --color-dark-green: #028a4a;
-    --color-light-green: #02b140;
-    --color-bg-light: #f9fffc;
-    --color-white: #ffffff;
-    --color-hover-green: #036c3a;
-    --color-border-light: #d4f8de;
-}
-
 body {
     display: flex;
     min-height: 100vh;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: -webkit-linear-gradient(to bottom, #e6ffee, var(--color-bg-light));
-    background: -moz-linear-gradient(to bottom, #e6ffee, var(--color-bg-light));
-    background: linear-gradient(to bottom, #e6ffee, var(--color-bg-light));
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #e6ffee, #e6ffee); /* Gradien hijau pastel */
 }
 
 .sidebar {
-    width: 250px;
-    background: -webkit-linear-gradient(to bottom, var(--color-dark-green), var(--color-light-green));
-    background: -moz-linear-gradient(to bottom, var(--color-dark-green), var(--color-light-green));
-    background: linear-gradient(to bottom, var(--color-dark-green), var(--color-light-green));
-    color: var(--color-white);
+    width: 240px;
+    background: linear-gradient(to bottom, #028a4a, #02b140);
+    color: #fff;
     padding-top: 20px;
     position: fixed;
     height: 100%;
     box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
-    border-right: 1px solid var(--color-border-light);
+    border-right: 1px solid #cff5d8;
 }
 
 .sidebar h2 {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: var(--color-white);
+    color: #fff;
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -58,7 +44,7 @@ body {
     margin: 10px auto 20px;
     border-radius: 50%;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-    border: 3px solid var(--color-white);
+    border: 3px solid #fff;
 }
 
 .sidebar a {
@@ -79,14 +65,15 @@ body {
 }
 
 .sidebar a:hover {
-    background-color: var(--color-hover-green);
-    color: var(--color-white);
+    background-color: #036c3a;
+    color: #ffffff;
 }
 
 .content {
-    margin-left: 250px;
+    margin-left: 240px;
     padding: 30px;
-    background-color: #f1fcee;
+    width: calc(100% - 240px);
+    background-color: #eaffec;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.8s ease-in-out;
@@ -94,45 +81,41 @@ body {
 
 .content h2 {
     font-size: 28px;
-    color: var(--color-dark-green);
+    color: #028a4a;
     margin-bottom: 20px;
     font-weight: bold;
-    border-bottom: 3px solid var(--color-light-green);
+    border-bottom: 3px solid #02b140;
     padding-bottom: 10px;
-    line-height: 1.4;
 }
 
 .btn-custom {
-    background-color: var(--color-light-green);
-    color: var(--color-white);
+    background-color: #02b140;
+    color: #ffffff;
     font-weight: bold;
     border-radius: 25px;
     padding: 10px 20px;
     border: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: var(--color-hover-green);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #036c3a;
 }
 
 table {
     width: 100%;
-    background-color: var(--color-white);
+    background-color: #d2f9d8;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    animation: fadeIn 1s ease-in-out;
-    border: 1px solid var(--color-border-light);
+    animation: fadeIn 0.8s ease-in-out;
+    border: 1px solid #d4f8de;
 }
 
 table thead {
-    background: -webkit-linear-gradient(to right, var(--color-light-green), var(--color-dark-green));
-    background: -moz-linear-gradient(to right, var(--color-light-green), var(--color-dark-green));
-    background: linear-gradient(to right, var(--color-light-green), var(--color-dark-green));
-    color: var(--color-white);
+    background: linear-gradient(to right, #02b140, #028a4a);
+    color: #ffffff;
     text-align: center;
     font-size: 16px;
 }
@@ -145,12 +128,11 @@ table th, table td {
 }
 
 table tbody tr {
-    background-color: var(--color-white);
-    transition: background-color 0.3s ease;
+    background-color: #f6fff7;
 }
 
 table tbody tr:nth-child(even) {
-    background-color: var(--color-bg-light);
+    background-color: #f6ffff;
 }
 
 table tbody tr:hover {
@@ -164,44 +146,23 @@ table tbody tr:hover {
     margin-bottom: 20px;
     font-weight: bold;
     background-color: #e0ffee;
-    color: var(--color-hover-green);
-    border: 1px solid var(--color-dark-green);
+    color: #036c3a;
+    border: 1px solid #028a4a;
 }
 
 .btn-info {
-    background-color: var(--color-light-green);
-    color: var(--color-white);
+    background-color: #02b140;
+    color: #ffffff;
     border-radius: 20px;
     padding: 5px 15px;
     border: none;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .btn-info:hover {
-    background-color: var(--color-hover-green);
+    background-color: #036c3a;
 }
 
 .btn-danger:hover {
     background-color: #c82333;
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-    .content {
-        margin-left: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .content {
-        margin-left: 0;
-        padding: 20px;
-    }
 }
