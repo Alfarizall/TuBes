@@ -1,0 +1,207 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+:root {
+    --color-dark-green: #028a4a;
+    --color-light-green: #02b140;
+    --color-bg-light: #f9fffc;
+    --color-white: #ffffff;
+    --color-hover-green: #036c3a;
+    --color-border-light: #d4f8de;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: -webkit-linear-gradient(to bottom, #e6ffee, var(--color-bg-light));
+    background: -moz-linear-gradient(to bottom, #e6ffee, var(--color-bg-light));
+    background: linear-gradient(to bottom, #e6ffee, var(--color-bg-light));
+    line-height: 1.6;
+}
+
+.sidebar {
+    width: 250px;
+    background: -webkit-linear-gradient(to bottom, var(--color-dark-green), var(--color-light-green));
+    background: -moz-linear-gradient(to bottom, var(--color-dark-green), var(--color-light-green));
+    background: linear-gradient(to bottom, var(--color-dark-green), var(--color-light-green));
+    color: var(--color-white);
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid var(--color-border-light);
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo-klinik {
+    display: block;
+    width: 90px;
+    height: auto;
+    margin: 10px auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--color-white);
+}
+
+.sidebar a {
+    color: #f0fff5;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a i {
+    margin-right: 15px;
+}
+
+.sidebar a:hover {
+    background-color: var(--color-hover-green);
+    color: var(--color-white);
+}
+
+.content {
+    margin-left: 250px;
+    padding: 30px;
+    background-color: #f1fcee;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.content h2 {
+    font-size: 28px;
+    color: var(--color-dark-green);
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-light-green);
+    padding-bottom: 10px;
+    line-height: 1.4;
+}
+
+.btn-custom {
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--color-hover-green);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+    border: 1px solid var(--color-border-light);
+}
+
+table thead {
+    background: -webkit-linear-gradient(to right, var(--color-light-green), var(--color-dark-green));
+    background: -moz-linear-gradient(to right, var(--color-light-green), var(--color-dark-green));
+    background: linear-gradient(to right, var(--color-light-green), var(--color-dark-green));
+    color: var(--color-white);
+    text-align: center;
+    font-size: 16px;
+}
+
+table th, table td {
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e6f8ed;
+}
+
+table tbody tr {
+    background-color: var(--color-white);
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--color-bg-light);
+}
+
+table tbody tr:hover {
+    background-color: #cff5d8;
+}
+
+.alert {
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: #e0ffee;
+    color: var(--color-hover-green);
+    border: 1px solid var(--color-dark-green);
+}
+
+.btn-info {
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.btn-info:hover {
+    background-color: var(--color-hover-green);
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
